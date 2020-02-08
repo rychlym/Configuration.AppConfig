@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IsPackable>true</IsPackable>
+    <Description>
+      A small try of compensation of so far non-existing Microsoft.Extensions.Configuration.AppConfig
+    </Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/rychlym/Configuration.AppConfig</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rychlym/Configuration.AppConfig</RepositoryUrl>
+    <PackageTags>AppConfig Configuration</PackageTags>
+    <Version>0.1.0</Version>
+    <Authors>Mojmir Rychly</Authors>
+    <Company />
+    <Product />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+  
+  
+
+</Project>
