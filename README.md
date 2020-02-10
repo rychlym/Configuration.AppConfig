@@ -38,22 +38,26 @@ $ dotnet add package Configuration.AppConfig
 	builder.AddAppConfig();								
 ```
 
-2) Build the configuration
+2) Build the configuration (an object implementing the [IConfiguration](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration) interface)
 
 ```csharp
 	var config = builder.Build();
 ```
 
 3) Use the configuration the standard way to read the appSettings or the connectionStrings
+   (Please reference the [Microsoft.Extensions.Configuration.Binder](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Binder/) NuGet package in order to use the GetValue\<T\>() method)
 ```csharp
-	var tmpDirectory = config.GetValue<string>("appSettings:tmpDir");
-	var dbConnStr = config.GetValue<string>("connectionStrings:DbConn");
+	var tmpDirectory = config["appSettings:tmpDir"];
+	var dbConnStr = config["connectionStrings:DbConn"];
+	
+	var threshold = config.GetValue<double>("appSettings:threshold");
 ```
 
 ### Provider Parameters
 
 It can be specified, how the appSettings and connectionString sections will be named when getting the value.
-(Then e.g. used together with the JSON file configuration source with the same naming)
+Then e.g. used together with the JSON file configuration source with the same naming.
+(Please reference the [Microsoft.Extensions.Configuration.Json](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Json) NuGet package in order to use the AddJsonFile() method).
 
 ```csharp
 	var builder = new ConfigurationBuilder()			
@@ -63,8 +67,9 @@ It can be specified, how the appSettings and connectionString sections will be n
 
 ```csharp
 	// reads either from the legacy app.config (appSettings, connectionStrings sections) or from JSON with AppSettings, ConnectionStrings sections
-	var tmpDirectory = config.GetValue<string>("AppSettings:tmpDir");
-	var dbConnStr = config.GetValue<string>("ConnectionStrings:DbConn");
+	var tmpDirectory = config["appSettings:tmpDir"];
+	var dbConnStr = config["connectionStrings:DbConn"];
+	...
 ```
 
 
