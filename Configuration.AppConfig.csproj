@@ -11,14 +11,14 @@
     <PackageProjectUrl>https://github.com/rychlym/Configuration.AppConfig</PackageProjectUrl>
     <RepositoryUrl>https://github.com/rychlym/Configuration.AppConfig</RepositoryUrl>
     <PackageTags>AppConfig Configuration</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Mojmir Rychly</Authors>
     <Company />
     <Product />
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.2" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
   
