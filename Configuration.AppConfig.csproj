@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;Net6.0;Net7.0</TargetFrameworks>
 
 		<IsPackable>true</IsPackable>
 		<Description>
@@ -11,22 +11,25 @@
 		<PackageProjectUrl>https://github.com/rychlym/Configuration.AppConfig</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/rychlym/Configuration.AppConfig</RepositoryUrl>
 		<PackageTags>AppConfig Configuration</PackageTags>
-		<Version>0.3.0</Version>
+		<Version>0.3.1</Version>
 		<Authors>Mojmir Rychly</Authors>
 		<Company />
 		<Product />
 	</PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.10" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.32" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
 	</ItemGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	<ItemGroup Condition=" '$(TargetFramework)' == 'Net6.0' ">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
 	</ItemGroup>
 
-
+	<ItemGroup Condition=" '$(TargetFramework)' == 'Net7.0' ">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+	</ItemGroup>
 
 </Project>
