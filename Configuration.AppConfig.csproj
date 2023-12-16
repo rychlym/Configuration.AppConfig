@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;Net6.0;Net7.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;Net6.0;Net7.0;Net8.0</TargetFrameworks>
 
 		<IsPackable>true</IsPackable>
 		<Description>
@@ -11,7 +11,7 @@
 		<PackageProjectUrl>https://github.com/rychlym/Configuration.AppConfig</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/rychlym/Configuration.AppConfig</RepositoryUrl>
 		<PackageTags>AppConfig Configuration</PackageTags>
-		<Version>0.3.1</Version>
+		<Version>0.3.2</Version>
 		<Authors>Mojmir Rychly</Authors>
 		<Company />
 		<Product />
@@ -31,5 +31,11 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
 	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'Net8.0' ">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+	</ItemGroup>
+
 
 </Project>
