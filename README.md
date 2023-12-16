@@ -78,7 +78,7 @@ Then e.g. used together with the JSON file configuration source with the same na
 
 * [Official documentation about Microsoft Configuration (ASP.NET Core)](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration)
 
-* [Microsoft.Extensions.Configuration source code](https://github.com/dotnet/extensions/tree/master/src/Configuration)
+* [Microsoft.Extensions.Configuration source code](https://github.com/dotnet/runtime/tree/main/src/libraries/Microsoft.Extensions.Configuration)
 
 * [Deep Dive into Microsoft Configuration Blog article](https://www.paraesthesia.com/archive/2018/06/20/microsoft-extensions-configuration-deep-dive/)
 
