@@ -11,9 +11,9 @@ Configuration.AppConfig
 
 The .NET Core configuration supports variety of configuration sources, like JSON file, XML file, Ini file, environment variables, command line.
 
-Nowadays, the former glory of the legacy app.config is long gone. If for some really necessary reason it is necessary to use this source, this small library can serve. 
+The "glory" of the legacy app.config has definitelly gone away. However, if there is still an unknown reason for using this older source, this small library culd serve. 
 This simple provider can read only the appSettings or connectionStrings sections.
-The current last version has not changed functionality, just supports the currently supported framewors as .NET6, .NET7 and .NET8, and als keeps the targeting the .NET Standard 2.0.
+The current last version has not changed functionality, just supports the currently supported framewors as .NET6, .NET7 and .NET8, and keeps the targeting the .NET Standard 2.0.
 
 In the case of more complex app.config, I would definitelly encourage you to migrate it to the appsettings.json.
 (Erlier days, It also was on the plate to consider the general XML file provider (referenced as the [Microsoft.Extensions.Configuration.Xml](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Xml) NuGet package.)
